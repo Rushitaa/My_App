@@ -1,0 +1,8 @@
+h1= @student.name
+p Email-id: #{@student.email} 
+p GPA(Out of 4.0): #{@student.gpa}
+p <a href="/students">back to index</a>
+p <a href="/students/#{@student.id}/edit">edit student</a>
+form action="/students/#{@student.id}" method="POST"
+  input type="hidden" name="_method" value="DELETE"
+  input type="submit" value="delete student"
